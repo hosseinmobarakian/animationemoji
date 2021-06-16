@@ -1,0 +1,372 @@
+.anim {
+    display: block;
+    width: 200px;
+    height: 200px;
+    min-width: 20px;
+    min-height: 20px;
+}
+
+.anim span {
+    display: block;
+    position: relative;
+}
+
+.circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: rgb(255, 235, 191);
+}
+
+.semi-circle {
+    width: 60%;
+    height: 30%;
+    border-radius: 0 0 150px 150px;
+    background-color: rgb(247, 170, 134);
+    margin: -40% auto 0;
+    overflow: hidden;
+}
+
+.foursquare {
+    width: 100%;
+    height: 30%;
+    background-color: #fff;
+}
+
+.eye-right {
+    min-width: 10%;
+    width: 10%;
+    height: 10%;
+    background: rgb(65, 65, 65);
+    margin: 0% 0 0;
+    border-radius: 100%;
+}
+
+.eye-left {
+    min-width: 10%;
+    width: 10%;
+    height: 10%;
+    background: rgb(65, 65, 65);
+    margin: 0% 0 0;
+    border-radius: 100%;
+}
+
+.eye-div {
+    width: 100%;
+    height: 100%;
+    margin: -60% 0 0;
+    display: flex!important;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.anim-laugh .eye-div {
+    animation: 3s infinite laugh-eyes;
+}
+
+.anim-laugh .eye-right, .anim-laugh .eye-left {
+    border-radius: 150px 150px 0 0;
+    background: none;
+    border: 2px solid rgb(65, 65, 65);
+    border-bottom: none;
+    min-width: 20%;
+    width: 20%;
+    height: 10%;
+}
+
+.anim-laugh .semi-circle {
+    animation: 3s infinite laugh-mouth;
+}
+
+.anim-wow .eye-div {
+    margin: -45% 0 0;
+    animation: 3s infinite wow-eyes;
+}
+
+
+.anim-wow .semi-circle {
+    animation: 3s infinite wow-mouth;
+}
+
+.anim-wink .eye-div {
+    margin: -50% 0 0;
+    animation: 3s infinite wink-eyes;
+}
+
+.anim-wink .eye-right{
+    animation: 3s infinite wink-right-eye;
+
+}
+.anim-wink .semi-circle {
+    animation: 3s infinite wink-mouth;
+}
+
+.drops{
+    background-color: rgb(138, 203, 239);
+    border-radius: 100%;
+    width: 20px;
+    height:20px;
+    position: relative;
+}
+
+.drops:before{
+    content: "";
+    background-color: rgb(138, 203, 239);
+    width: 10px;
+    height:10px;
+    position: relative;
+    margin: -22px 5px 0;
+    display: block;
+    transform: rotateZ(45deg);
+}
+
+.heart {
+    background-color: rgb(247, 170, 134);
+    display: inline-block;
+    height: 30px;
+    margin: 0 10px;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+    width: 30px;
+  }
+  
+  .heart:before,
+  .heart:after {
+    content: "";
+    background-color: rgb(247, 170, 134);
+    border-radius: 50%;
+    height: 30px;
+    position: absolute;
+    width: 30px;
+  }
+  
+  .heart:before {
+    top: -15px;
+    left: 0;
+  }
+  
+  .heart:after {
+    left: 15px;
+    top: 0;
+  }
+
+@keyframes laugh-eyes {
+    0% {
+        width: 100%;
+        margin: -50% 0 0;
+        transform: rotateZ(0deg);
+    }
+    25% {
+        width: 60%;
+        margin: -50% 10% 0;
+        transform: rotateZ(-10deg);
+    }
+    50% {
+        width: 100%;
+        margin: -50% 0 0;
+        transform: rotateZ(0deg);
+    }
+    75% {
+        width: 60%;
+        margin: -50% 30% 0;
+        transform: rotateZ(10deg);
+    }
+    100% {
+        width: 100%;
+        margin: -50% 0 0;
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes laugh-mouth {
+    0% {
+        margin: -40% 20% 0;
+        transform: rotateZ(0deg);
+    }
+    25% {
+        margin: -60% 15% 0;
+        transform: rotateZ(-10deg);
+    }
+    50% {
+        margin: -40% 20% 0;
+        transform: rotateZ(0deg);
+    }
+    75% {
+        margin: -60% 25% 0;
+        transform: rotateZ(10deg);
+    }
+    100% {
+        margin: -40% 20% 0;
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes wow-eyes {
+    0% {
+        margin: -45% 0 0;
+        transform: rotateZ(0deg);
+    }
+    25% {
+        margin: -45% -20% 0;
+        transform: rotateZ(10deg);
+    }
+    50% {
+        margin: -45% 0 0;
+        transform: rotateZ(0deg);
+    }
+    75% {
+        margin: -45% 20% 0;
+        transform: rotateZ(-10deg);
+    }
+    100% {
+        margin: -45% 0 0;
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes wow-mouth {
+    0% {
+        margin: -40% 35% 0;
+        transform: rotateZ(0deg);
+        border-radius: 150px;
+        width: 30%;
+        height: 30%;
+    }
+    25% {
+        margin: -40% 10% 0; 
+        transform: rotateZ(10deg);
+        border-radius: 0 0 150px 150px;
+        width: 60%;
+        height: 30%;
+    }
+    50% {
+        margin: -40% 35% 0;
+        transform: rotateZ(0deg);
+        border-radius: 150px;
+        width: 30%;
+        height: 30%;
+    }
+    75% {
+        margin: -40% 30% 0;
+        transform: rotateZ(-10deg);
+        border-radius: 0 0 150px 150px;
+        width: 60%;
+        height: 30%;
+    }
+    100% {
+        margin: -40% 35% 0;
+        transform: rotateZ(0deg);
+        border-radius: 150px;
+        width: 30%;
+        height: 30%;
+    }
+}
+
+@keyframes wink-mouth {
+    0% {
+        width: 60%;
+        height: 30%;
+
+    }
+    25% {
+        width: 40%;
+        height: 20%;
+    }
+    50% {
+        width: 40%;
+        height: 20%;
+    }
+    75% {
+        width: 60%;
+        height: 30%;
+    }
+    100% {
+        width: 60%;
+        height: 30%;
+    }
+}
+
+@keyframes wink-eyes {
+    0% {
+        margin: -50% 0 0;
+    }
+    25% {
+        margin: -40% 0 0;
+    }
+    50% {
+        margin: -40% 0 0;
+    }
+    75% {
+        margin: -50% -5% 0;
+    }
+    100% {
+        margin: -50% 0 0;
+    }
+}
+
+@keyframes wink-right-eye {
+    0% {
+        width: 10%;
+        height: 1%;
+        border-radius: 0;
+        margin-top: 4%;
+    }
+    25% {
+        width: 10%;
+        height: 10%;
+        border-radius: 100%;
+        margin-top: 0;
+    }
+    50% {
+        width: 10%;
+        height: 10%;
+        border-radius: 100%;
+        margin-top: 0;
+    }
+    75% {
+        width: 10%;
+        height: 10%;
+        border-radius: 100%;
+        margin-top: 0;
+    }
+    100% {
+        width: 10%;
+        height: 1%; 
+        border-radius: 0;
+        margin-top: 4%;
+    }
+}
+
+@keyframes wink-left-eye {
+    0% {
+        width: 10%;
+        height: 1%;
+        border-radius: 0;
+        margin-top: 4%;
+    }
+    25% {
+        width: 10%;
+        height: 10%;
+        border-radius: 100%;
+        margin-top: 0;
+    }
+    50% {
+        width: 10%;
+        height: 10%;
+        border-radius: 100%;
+        margin-top: 0;
+    }
+    75% {
+        width: 10%;
+        height: 10%;
+        border-radius: 100%;
+        margin-top: 0;
+    }
+    100% {
+        width: 10%;
+        height: 1%; 
+        border-radius: 0;
+        margin-top: 4%;
+    }
+}

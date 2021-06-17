@@ -1,5 +1,6 @@
 # Animation Emoji
 A simple and lightweight javascript and CSS library to use animated emojis.
+[Demo emojis](https://codepen.io/hosseinmobarakian/pen/WNpmNxO)
 ## Usage
 In the first step you must import javascript and CSS file into your project with following codes:
 

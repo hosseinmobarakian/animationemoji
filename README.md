@@ -13,3 +13,4 @@ In the next step you can put animated emojis you like where. To doing that you c
 * `anim anim-laugh`
 * `anim anim-wow`
 * `anim anim-wink`
+* `anim anim-love`

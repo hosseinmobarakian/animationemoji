@@ -84,7 +84,6 @@
     animation: 3s infinite wow-eyes;
 }
 
-
 .anim-wow .semi-circle {
     animation: 3s infinite wow-mouth;
 }
@@ -94,10 +93,10 @@
     animation: 3s infinite wink-eyes;
 }
 
-.anim-wink .eye-right{
+.anim-wink .eye-right {
     animation: 3s infinite wink-right-eye;
-
 }
+
 .anim-wink .semi-circle {
     animation: 3s infinite wink-mouth;
 }
@@ -111,22 +110,42 @@
 .anim-love .eye-div {
     margin: -50% 0 0;
 }
-.anim-love .heart{
+
+.anim-love .heart {
     animation: 3s infinite love-eyes;
 }
-.drops{
+
+
+.anim-kiss .eye-div {
+    margin: -40% 0 0;
+}
+
+.anim-kiss .lips {
+    margin: -30% 40%;
+    animation: 3s infinite kiss-lips;
+}
+
+.anim-kiss .heart {
+    margin: -65% 20%;
+    width: 10%;
+    height: 10%;
+    animation: 3s infinite kiss-heart;
+}
+
+
+.drops {
     background-color: rgb(138, 203, 239);
     border-radius: 100%;
     width: 20px;
-    height:20px;
+    height: 20px;
     position: relative;
 }
 
-.drops:before{
+.drops:before {
     content: "";
     background-color: rgb(138, 203, 239);
     width: 10px;
-    height:10px;
+    height: 10px;
     position: relative;
     margin: -22px 5px 0;
     display: block;
@@ -137,32 +156,52 @@
     background-color: rgb(247, 170, 134);
     display: inline-block;
     height: 15%;
-    margin: 0 10px;
     position: relative;
     top: 0;
     transform: rotate(-45deg);
     width: 15%;
-  }
-  
-  .heart:before,
-  .heart:after {
+}
+
+.heart:before, .heart:after {
     content: "";
     background-color: rgb(247, 170, 134);
     border-radius: 50%;
     height: 100%;
     position: absolute;
     width: 100%;
-  }
-  
-  .heart:before {
+}
+
+.heart:before {
     top: -45%;
     left: 0;
-  }
-  
-  .heart:after {
+}
+
+.heart:after {
     left: 45%;
     top: 0;
-  }
+}
+
+.lips {
+    border: 1px solid rgb(65, 65, 65);
+    width: 10%;
+    height: 10%;
+    border-radius: 135px 135px 0 0;
+    border-bottom: none;
+    transform: rotateZ(-90deg);
+    margin-top: -30%;
+}
+
+.lips:before {
+    content: "";
+    display: block;
+    border: 1px solid rgb(65, 65, 65);
+    width: 60%;
+    height: 60%;
+    border-radius: 1000px 1000px 0 0;
+    border-bottom: none;
+    position: relative;
+    margin: 20% -70%;
+}
 
 @keyframes laugh-eyes {
     0% {
@@ -247,7 +286,7 @@
         height: 30%;
     }
     25% {
-        margin: -40% 10% 0; 
+        margin: -40% 10% 0;
         transform: rotateZ(10deg);
         border-radius: 0 0 150px 150px;
         width: 60%;
@@ -280,7 +319,6 @@
     0% {
         width: 60%;
         height: 30%;
-
     }
     25% {
         width: 40%;
@@ -345,7 +383,7 @@
     }
     100% {
         width: 10%;
-        height: 1%; 
+        height: 1%;
         border-radius: 0;
         margin-top: 4%;
     }
@@ -378,7 +416,7 @@
     }
     100% {
         width: 10%;
-        height: 1%; 
+        height: 1%;
         border-radius: 0;
         margin-top: 4%;
     }
@@ -404,5 +442,51 @@
     100% {
         width: 15%;
         height: 15%;
+    }
+}
+
+@keyframes kiss-lips {
+    0% {
+        margin: -30% 40%;
+    }
+    25% {
+        margin: -30% 35%;
+    }
+    50% {
+        margin: -30% 40%;
+    }
+    75% {
+        margin: -30% 35%;
+    }
+    100% {
+        margin: -30% 40%;
+    }
+}
+
+@keyframes kiss-heart {
+    0% {
+        margin: -65% 40%;
+        width: 0%;
+        height: 0%;
+    }
+    25% {
+        margin: -65% 10%;
+        width: 15%;
+        height: 15%;
+    }
+    50% {
+        margin: -65% 40%;
+        width: 0%;
+        height: 0%;
+    }
+    75% {
+        margin: -65% 10%;
+        width: 15%;
+        height: 15%;
+    }
+    100% {
+        margin: -65% 40%;
+        width: 0%;
+        height: 0%;
     }
 }
